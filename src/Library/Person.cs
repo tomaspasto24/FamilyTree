@@ -1,50 +1,29 @@
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System;
-
 namespace Library
 {
     public class Person
     {
-        private string nombre;
-        private int edad;
-        private List<Person> children = new List<Person>();
+        private string name;
+        private int age;
 
-        public ReadOnlyCollection<Person> Children { 
-            get
-            {
-                return this.children.AsReadOnly();
-            }
-        }
-        public string Nombre
+        public string Name
         {
             get
             {
-                return nombre;
+                return name;
             }
         }
-        public int Edad
+        public int Age
         {
             get
             {
-                return edad;
+                return age;
             }
         }
 
-        public Person(string nombre, int edad)
+        public Person(string name, int age)
         {
-            this.nombre = nombre;
-            this.edad = edad;
-        }
-
-        public void AddChildren(Person n)
-        {
-            this.children.Add(n);
-        }
-
-        public void Accept(Visitor visitor)
-        {
-            visitor.Visit(this);
+            this.name = name;
+            this.age = age;
         }
     }
 }

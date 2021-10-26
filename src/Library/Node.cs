@@ -7,7 +7,7 @@ namespace Library
     public class Node
     {
         private int number;
-
+        private Person person;
         private List<Node> children = new List<Node>();
 
         public int Number {
@@ -17,15 +17,9 @@ namespace Library
             }
         }
 
-        public ReadOnlyCollection<Node> Children { 
-            get
-            {
-                return this.children.AsReadOnly();
-            }
-        }
-
-        public Node(int number)
+        public Node(int number, Person person)
         {
+            this.person = person;
             this.number = number;
         }
 

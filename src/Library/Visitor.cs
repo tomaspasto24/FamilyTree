@@ -17,7 +17,7 @@ namespace Library
     {
         public override void Visit(Person person)
         {
-            sumatoriaEdades += person.Edad;
+            sumatoriaEdades += person.Age;
         }
     }
 }
